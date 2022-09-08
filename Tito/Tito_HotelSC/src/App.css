@@ -1,0 +1,15 @@
+.card{
+  width: 300px;
+ 
+}
+
+body{
+  padding: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.pageHeader{
+  font-family: 'ink free';
+  text-align: center;
+}
