@@ -1,0 +1,38 @@
+.FormUser{
+    max-width: 70%;
+    margin: auto;
+    padding: 30px;
+    border-radius: 11px;
+    background-color:rgba(253, 222, 222, 0.329);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: box-shadow .3s;
+    
+    font-weight: bold;
+    
+}
+
+.raise {
+  background-color: rgb(255, 180, 180);
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 11px;
+  padding: 10px;
+  font-weight: bolder;
+}
+.raise:hover {
+  background-color:  rgb(5, 5, 5);
+  transform: translateX(0.30em);
+  transition: all 0.2s;
+  color: rgb(255, 180, 180);
+}
+
+.FormUser * {
+    margin: 5px;
+}
+
+
+  .FormUser:hover {
+    box-shadow: 0 8px 11px rgb(14, 13, 13); 
+  }
+
+  
