@@ -1,24 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../App.css"
+import Axios from 'axios'
 
-class Habitacion extends React.Component{
-  constructor(props){
-    super(props);
-    this.state = {
-      limpieza : null,
-      ocupado: null,
-    }
-  }
-  render(){
+export default function Habitacion(){
+  const [datos, setDatos] = useState('');
+  const [isCargando, setIsCargando] = useState(true);
+
+  useEffect(()=>{
+    fetch('http://localhost:3001/api/empleados/',{
+      method: "GET",
+      headers: {
+        "access-control-allow-origin" : "*",
+        "Content-type": "application/json; charset=UTF-8"
+      }})
+    .then((resp)=> resp.json())
+    .then((data)=>{
+      console.log(data);
+      setDatos(data);
+      setIsCargando(false)
+    })
+  },[])
+  if(isCargando){
     return(
-      <div className="card">
-        <img className="card-img-top " src={"https://picsum.photos/100"} />
-        <div className="card-body">
-          <h4 className="card-title">Habitacion {this.props.numHab}</h4>
-        </div>
+    
+      <div>
+        <h1>Cargando...</h1>
       </div>
     )
   }
+  return(
+    <div >
+      <p>LISTO</p>
+    </div>
+  )
   
-}
-export default Habitacion;
+};

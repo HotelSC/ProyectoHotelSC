@@ -4,7 +4,6 @@ import CreateUserForm from './components/CreateUserForm';
 
 
 
-
 class CrearUsuario extends React.Component{ 
 
     render(){
