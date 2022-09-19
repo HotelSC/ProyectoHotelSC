@@ -1,5 +1,5 @@
-CREATE DATABASE Proyecto_JS;
-USE Proyecto_JS;
+CREATE DATABASE HotelSC;
+USE HotelSC;
 
 DROP TABLE asignacionMaterial;
 DROP TABLE inventario;
@@ -8,7 +8,7 @@ DROP TABLE averias;
 DROP TABLE habitaciones;
 DROP TABLE empleados;
 
-DROP TABLE empleados;
+
 CREATE TABLE empleados(
 	id INT(6) AUTO_INCREMENT PRIMARY KEY NOT NULL,
 	nombre VARCHAR(50) NOT NULL,
@@ -34,7 +34,6 @@ INSERT INTO empleados (nombre, apellidos, dni, email, fechaNacimiento, usuario, 
 INSERT INTO empleados (nombre, apellidos, dni, email, fechaNacimiento, usuario, pass, categoria, telefono, direccion, localidad) VALUES ('Gertrudiz','Apellido2','111111111C','mailTra3@correo.com','1987-1-12','tra3','jesucristo','mantenimiento','666666666','Calle falsa 1233','Barcelona');
 INSERT INTO empleados (nombre, apellidos, dni, email, fechaNacimiento, usuario, pass, categoria, telefono, direccion, localidad) VALUES ('Nombre4','Apellido2','111111111D','mailTra4@correo.com','1977-1-12','tra4','jesucristo','mantenimiento','777777777','Calle falsa 1236','Barcelona');
 
-DROP TABLE habitaciones;
 CREATE TABLE habitaciones(
 	id INT(6) AUTO_INCREMENT PRIMARY KEY NOT NULL,
 	planta INT(2) NOT NULL,
@@ -55,7 +54,6 @@ INSERT INTO habitaciones (planta, numero, ocupacion, limpieza, mantenimiento, ob
 INSERT INTO habitaciones (planta, numero, ocupacion, limpieza, mantenimiento, observaciones) VALUES (3,'008',FALSE,TRUE,TRUE,'');
 INSERT INTO habitaciones (planta, numero, ocupacion, limpieza, mantenimiento, observaciones) VALUES (3,'009',FALSE,TRUE,TRUE,'');
 
-DROP TABLE averias;
 CREATE TABLE averias(
 	id INT(6) AUTO_INCREMENT PRIMARY KEY NOT NULL,
 	desperfecto TEXT NOT NULL,
@@ -72,7 +70,6 @@ INSERT INTO averias (desperfecto, fechaAveria, correccion, idhabitacion) VALUES 
 INSERT INTO averias (desperfecto, fechaAveria, correccion, idhabitacion) VALUES ('Baño atascado','2022-01-15',TRUE,4);
 INSERT INTO averias (desperfecto, fechaAveria, correccion, idhabitacion) VALUES ('Silla dañada','2022-01-15',TRUE,7);
 
-DROP TABLE asignacionhabitacion;
 CREATE TABLE asignacionhabitacion(
 	id INT(6) AUTO_INCREMENT PRIMARY KEY NOT NULL,
 	fecha date NOT NULL,
@@ -89,7 +86,6 @@ INSERT INTO asignacionhabitacion (fecha, tarea, idhabitacion, idempleado) VALUES
 INSERT INTO asignacionhabitacion (fecha, tarea, idhabitacion, idempleado) VALUES ('2022-01-15','mantenimiento',3,7);
 INSERT INTO asignacionhabitacion (fecha, tarea, idhabitacion, idempleado) VALUES ('2022-01-15','limpieza',1,3);
 
-DROP TABLE inventario;
 CREATE TABLE inventario(
 	id INT(6) AUTO_INCREMENT PRIMARY KEY NOT NULL,
 	tipoMaterial VARCHAR(50) NOT NULL,
@@ -112,7 +108,6 @@ INSERT INTO inventario (tipoMaterial, unidad, cantidad, catMat) VALUES ('mopa','
 INSERT INTO inventario (tipoMaterial, unidad, cantidad, catMat) VALUES ('destornillador','unidades',6,'mantenimiento');
 INSERT INTO inventario (tipoMaterial, unidad, cantidad, catMat) VALUES ('papel higienico pack6 unidades','unidades',20,'limpieza');
 
-DROP TABLE asignacionMaterial;
 CREATE TABLE asignacionMaterial(
 	id INT(6) AUTO_INCREMENT PRIMARY KEY NOT NULL,
 	fechaAsignacion DATE NOT NULL,
