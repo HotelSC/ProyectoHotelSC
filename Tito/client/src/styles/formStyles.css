@@ -40,9 +40,16 @@ h1{
 
 
   /*- -----------*/
+.userInfo span{
+  font-weight: bolder;
+}
+
+.userInfo .col {
+  border: 1px solid black;
+}
 
 .container-profile {
-  width: 70%;
+  width: 85%;
   font-size: 2vw;
 }
 
