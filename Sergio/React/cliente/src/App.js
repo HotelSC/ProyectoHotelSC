@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Habitacion from './Components/Habitacion';
+import Sidebar from './Components/Sidebar';
 import ModalP from './Components/Modal';
 import Inventario from './Components/Inventario';
 import Inspeccion from './Components/Inspeccion';
@@ -12,7 +13,8 @@ const App = () => {
     
     return (
       <div> 
-        <Habitacion></Habitacion>
+        <Habitacion objetoHabitacion = {}/>
+        <Sidebar></Sidebar>
         <ContenedorBotones>
           <Boton onClick={() => cambiarEstadoModal1(!estadoModal1)}>Modal 1</Boton>
         </ContenedorBotones>
