@@ -29,3 +29,10 @@ body{
     0 10px 10px rgba(0, 0, 0, 0.445), 
     0 20px 20px rgba(0, 0, 0, 0.397);
 }
+
+.snail{
+  height: 50%;
+  width: 50%;
+  display:block;
+  margin:auto;
+}
