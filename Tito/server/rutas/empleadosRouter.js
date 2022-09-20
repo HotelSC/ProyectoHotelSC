@@ -41,7 +41,7 @@ router.get('/', function (req, res, next) {
 // GET de un solo alumne
 router.get('/:id', function (req, res, next) {
     sequelize.sync().then(() => {
-        Alumne.findOne({ where: { id: req.params.id } })
+        Empleado.findOne({ where: { id: req.params.id } })
             // .then(Alumne => Alumne.get({plain: true}))
             .then(Alumne => res.json({
                 ok: true,
