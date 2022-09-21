@@ -4,21 +4,20 @@ import React from "react";
 
 function Habitacion (props){
   
-  const dataHab = props.data
-  
+  console.log('Datos props: '+props)
   return (
     <>
-      <div class="app-content">
-        <div class="app-content-header">
-          <h1 class="app-content-headerText">Habitaciones</h1>
-          <button class="mode-switch" title="Switch Theme">
+      <div className="app-content">
+        <div className="app-content-header">
+          <h1 className="app-content-headerText">Habitaciones</h1>
+          <button className="mode-switch" title="Switch Theme">
             <svg
-              class="moon"
+              className="moon"
               fill="none"
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -27,13 +26,13 @@ function Habitacion (props){
               <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
             </svg>
           </button>
-          <button class="app-content-headerButton">Añadir Habitación</button>
+          <button className="app-content-headerButton">Añadir Habitación</button>
         </div>
-        <div class="app-content-actions">
-          <input class="search-bar" placeholder="Search..." type="text" />
-          <div class="app-content-actions-wrapper">
-            <div class="filter-button-wrapper">
-              <button class="action-button filter jsFilter">
+        <div className="app-content-actions">
+          <input className="search-bar" placeholder="Search..." type="text" />
+          <div className="app-content-actions-wrapper">
+            <div className="filter-button-wrapper">
+              <button className="action-button filter jsFilter">
                 <span>Filtro</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -42,15 +41,15 @@ function Habitacion (props){
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="feather feather-filter"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="feather feather-filter"
                 >
                   <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
                 </svg>
               </button>
-              <div class="filter-menu">
+              <div className="filter-menu">
                 <label>Ocupacion</label>
                 <select>
                   <option>Ocupada</option>
@@ -69,13 +68,13 @@ function Habitacion (props){
                   <option>En mantenimiento</option>
                   <option>No ralizar mantenimiento</option>
                 </select>
-                <div class="filter-menu-buttons">
-                  <button class="filter-button reset">Restablecer</button>
-                  <button class="filter-button apply">Buscar</button>
+                <div className="filter-menu-buttons">
+                  <button className="filter-button reset">Restablecer</button>
+                  <button className="filter-button apply">Buscar</button>
                 </div>
               </div>
             </div>
-            <button class="action-button list active" title="List View">
+            <button className="action-button list active" title="List View">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -83,10 +82,10 @@ function Habitacion (props){
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-list"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="feather feather-list"
               >
                 <line x1="8" y1="6" x2="21" y2="6"></line>
                 <line x1="8" y1="12" x2="21" y2="12"></line>
@@ -96,7 +95,7 @@ function Habitacion (props){
                 <line x1="3" y1="18" x2="3.01" y2="18"></line>
               </svg>
             </button>
-            <button class="action-button grid" title="Grid View">
+            <button className="action-button grid" title="Grid View">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -104,10 +103,10 @@ function Habitacion (props){
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-grid"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="feather feather-grid"
               >
                 <rect x="3" y="3" width="7" height="7"></rect>
                 <rect x="14" y="3" width="7" height="7"></rect>
@@ -117,11 +116,11 @@ function Habitacion (props){
             </button>
           </div>
         </div>
-        <div class="products-area-wrapper tableView">
-          <div class="products-header">
-            <div class="product-cell image">
+        <div className="products-area-wrapper tableView">
+          <div className="products-header">
+            <div className="product-cell image">
               Habitación
-              <button class="sort-button">
+              <button className="sort-button">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -135,9 +134,9 @@ function Habitacion (props){
                 </svg>
               </button>
             </div>
-            <div class="product-cell category">
+            <div className="product-cell category">
               Planta
-              <button class="sort-button">
+              <button className="sort-button">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -152,9 +151,9 @@ function Habitacion (props){
               </button>
             </div>
 
-            <div class="product-cell status-cell">
+            <div className="product-cell status-cell">
               Número
-              <button class="sort-button">
+              <button className="sort-button">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -168,9 +167,9 @@ function Habitacion (props){
                 </svg>
               </button>
             </div>
-            <div class="product-cell sales">
+            <div className="product-cell sales">
               Ocupación
-              <button class="sort-button">
+              <button className="sort-button">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -184,9 +183,9 @@ function Habitacion (props){
                 </svg>
               </button>
             </div>
-            <div class="product-cell stock">
+            <div className="product-cell stock">
               Limpieza
-              <button class="sort-button">
+              <button className="sort-button">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -200,9 +199,9 @@ function Habitacion (props){
                 </svg>
               </button>
             </div>
-            <div class="product-cell price">
+            <div className="product-cell price">
               Mantenimiento
-              <button class="sort-button">
+              <button className="sort-button">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -216,9 +215,9 @@ function Habitacion (props){
                 </svg>
               </button>
               </div>
-            <div class="product-cell price">
+            <div className="product-cell price">
               Observaciones
-              <button class="sort-button">
+              <button className="sort-button">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -233,8 +232,8 @@ function Habitacion (props){
               </button>
             </div>
           </div>
-          <div class="products-row">
-            <button class="cell-more-button">
+          <div className="products-row">
+            <button className="cell-more-button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"
@@ -242,49 +241,48 @@ function Habitacion (props){
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-more-vertical"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="feather feather-more-vertical"
               >
                 <circle cx="12" cy="12" r="1"></circle>
                 <circle cx="12" cy="5" r="1"></circle>
                 <circle cx="12" cy="19" r="1"></circle>
               </svg>
             </button>
-            <div class="product-cell image">
+            <div className="product-cell image">
               <img
                 src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1950&amp;q=80"
                 alt="product"
               />
               <span>Habitación 01</span>
             </div>
-            <div class="product-cell category">
-              <span class="cell-label">Planta:</span>01
+            <div className="product-cell category">
+              <span className="cell-label">Planta:</span>
             </div>
-            <div class="product-cell category">
-              <span class="cell-label">Número:</span>01
+            <div className="product-cell category">
+              <span className="cell-label">Número:</span>01
             </div>
-            <div class="product-cell status-cell">
-              <span class="cell-label">Ocupacion:</span>
-              <span class="status active">Ocupado</span>
+            <div className="product-cell status-cell">
+              <span className="cell-label">Ocupacion:</span>
+              <span className="status active">Ocupado</span>
             </div>
-            <div class="product-cell status-cell">
-              <span class="cell-label">Limpieza:</span>
-              <span class="status active">Limpia</span>
+            <div className="product-cell status-cell">
+              <span className="cell-label">Limpieza:</span>
+              <span className="status active">Limpia</span>
             </div>
-            <div class="product-cell status-cell">
-              <span class="cell-label">Mantenimiento:</span>
-              <span class="status active">Sin incidencias</span>
+            <div className="product-cell status-cell">
+              <span className="cell-label">Mantenimiento:</span>
+              <span className="status active">Sin incidencias</span>
             </div>
-            <div class="product-cell stock">
-              <span class="cell-label">Observaciones:</span>
+            <div className="product-cell stock">
+              <span className="cell-label">Observaciones:</span>
             </div>
-            <div class="product-cell stock">
-              <textarea class="cell-label textarea col-12 rounded">Observaciones:</textarea>
+            <div className="product-cell stock">
+              <textarea className="cell-label textarea col-12 rounded">Observaciones:</textarea>
             </div>
           </div>
-          
         </div>
       </div>
     </>
@@ -292,29 +290,3 @@ function Habitacion (props){
 };
 
 export default Habitacion;
-
-document.querySelector(".jsFilter").addEventListener("click", function () {
-  document.querySelector(".filter-menu").classList.toggle("active");
-});
-
-document.querySelector(".grid").addEventListener("click", function () {
-  document.querySelector(".list").classList.remove("active");
-  document.querySelector(".grid").classList.add("active");
-  document.querySelector(".products-area-wrapper").classList.add("gridView");
-  document
-    .querySelector(".products-area-wrapper")
-    .classList.remove("tableView");
-});
-
-document.querySelector(".list").addEventListener("click", function () {
-  document.querySelector(".list").classList.add("active");
-  document.querySelector(".grid").classList.remove("active");
-  document.querySelector(".products-area-wrapper").classList.remove("gridView");
-  document.querySelector(".products-area-wrapper").classList.add("tableView");
-});
-
-var modeSwitch = document.querySelector('.mode-switch');
-modeSwitch.addEventListener('click', function () {                      
-  document.documentElement.classList.toggle('light');
-  modeSwitch.classList.toggle('active');
-});

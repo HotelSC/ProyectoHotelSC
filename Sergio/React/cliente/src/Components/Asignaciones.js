@@ -10,7 +10,7 @@ const data3 = [
     {idMat: 148, tipoMat: 'Destornillador',nombreTrab: 'Maria', fechaAsig: '2022/02/01', fechaRetorno: '2022/05/08',idTra: 17},
   ]
 
-class Inventario extends React.Component{
+class Asignacion extends React.Component{
   state={
       data3: data3,
       modalActualizar: false,
@@ -305,4 +305,4 @@ class Inventario extends React.Component{
       );
     };
   }
-  export default Inventario;
+  export default Asignacion;

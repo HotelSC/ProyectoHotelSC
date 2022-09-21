@@ -10,7 +10,7 @@ const data2 = [
   {idTipoMat: 1, tipoMat: 'Fregonas', idMat: 148},
 ]
 
-class Inventario extends React.Component{
+class Inspeccion extends React.Component{
   state={
       data2: data2,
       modalActualizar: false,
@@ -259,4 +259,4 @@ class Inventario extends React.Component{
       );
     };
   }
-  export default Inventario;
+  export default Inspeccion;

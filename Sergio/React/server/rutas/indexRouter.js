@@ -1,6 +1,6 @@
-import express from "express";
+import express from 'express';
 const router = express.Router();
-router.get("/", function (req, res, next) {
-  res.end("AcademicAPI");
+router.get('/', function (req, res, next) {
+res.end("Welcome to our API HotelSC");
 });
 export default router;

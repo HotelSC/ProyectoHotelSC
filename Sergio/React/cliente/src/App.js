@@ -1,20 +1,40 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Habitacion from './Components/Habitacion';
 import Sidebar from './Components/Sidebar';
-import ModalP from './Components/Modal';
-import Inventario from './Components/Inventario';
-import Inspeccion from './Components/Inspeccion';
-import Asignaciones from './Components/Asignaciones';
+// import ModalP from './Components/Modal';
+// import Inventario from './Components/Inventario';
+// import Inspeccion from './Components/Inspeccion';
+// import Asignaciones from './Components/Asignaciones';
 import styled from 'styled-components';
 import './App.css';
 
 const App = () => {
-  const [estadoModal1, cambiarEstadoModal1] = useState(false);
-    
+  const [datosHab, setDatosHab] = useState(''); 
+  const [isCargando, setIsCargando] = useState('');
+    useEffect(()=>{
+      fetch('http://localhost:3001/api/habitaciones',{
+        method: "GET",
+        headers: {
+          "access-control-allow-origin": "*",
+          "Content-type": "application/json; charset=UTF-8"
+        }})
+      .then((resp)=>resp.json())
+      .then((data)=>{
+        console.log(data);
+        setDatosHab(data);
+        setIsCargando(true)
+      })
+    },[])
+    if(isCargando==false){
+      return(<div><p>Cargando</p></div>)
+    }
+  
     return (
-      <div> 
-        <Habitacion objetoHabitacion = {}/>
-        <Sidebar></Sidebar>
+        <>
+          <Sidebar/>
+          <Habitacion objetoHabitacion = {datosHab}/>
+        
+        {/* <Sidebar objetoSidebar = {}/>
         <ContenedorBotones>
           <Boton onClick={() => cambiarEstadoModal1(!estadoModal1)}>Modal 1</Boton>
         </ContenedorBotones>
@@ -35,8 +55,8 @@ const App = () => {
         </ModalP>
         <Inventario></Inventario>
         <Inspeccion></Inspeccion>
-        <Asignaciones></Asignaciones>
-      </div>
+        <Asignaciones></Asignaciones> */}
+      </>
     );
   };
 
